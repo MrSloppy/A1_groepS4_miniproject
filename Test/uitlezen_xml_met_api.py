@@ -35,10 +35,21 @@ def schrijf_xml(antwoord_API):
 # Nu roepen we de fucntie aanmaken_xml aan:
 schrijf_xml(antwoord_API)
 
-
-
+bestemming_input = input("Wat is uw eindbestemming?")
+#Dit importeert de xmltodict module om xml bestanden in dictionaries te stoppen
 import xmltodict
+
+# Dit stelt de dictionary stations_dict vast met de inhoud van antwoord_API.text
+# Iedere XML elemental is nu hierarchisch onderverdeeld in dictonaries
 stations_dict = xmltodict.parse(antwoord_API.text)
+
+# Deze loop loopt door de aangemaakte dictioanry stations_dict
+# en wanneer hij een element "ActueleVertrekTijden" ziet met een element "VertrekkendeTrein" erbij dan:
 for i in stations_dict["ActueleVertrekTijden"]["VertrekkendeTrein"]:
+    # zet hij de informatie in dictionary i
     vertrekkende_trein=dict(i)
-    print(vertrekkende_trein)
+
+    # De if statement die bepaald wanneer er geprint moet worden
+    if vertrekkende_trein["EindBestemming"] == str(bestemming_input):
+        # print vervolgens wanneer de if statement geldt worden de volgende gegevens geprint:
+        print("Er vertrekt een trein met eindbestemming ", vertrekkende_trein["EindBestemming"], " om:", vertrekkende_trein["VertrekTijd"][11:16])          # de vertrekkende_trein["VertrekTijd"][11:16] is nodig om alleen het uur en de minuten te printen en niet de rest
