@@ -29,7 +29,4 @@ label2.pack(side = BOTTOM)
 label3 = Label(root, image=photo1) #je zet een foto in de label waarvan je eerder de naam had gegeven
 label3.pack(side=TOP)
 
-
-
 root.mainloop() #een mainloop aan het scherm toevoegen zodat het scherm blijft runnen
-
