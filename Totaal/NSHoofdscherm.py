@@ -1,1 +1,5 @@
-__author__ = 'Gijs'
+from tkinter import *
+
+root = Tk()
+
+root.mainloop()
