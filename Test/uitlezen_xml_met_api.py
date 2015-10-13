@@ -1,6 +1,6 @@
 __author__ = 'Plz no pasterino'
 
-
+from tkinter import *
 import requests                 # dit importeert de requests module die nodig is om toegang te krijgen tot de API
 import codecs                   # dit inporteert de mogelijkheid om gebruik te maken van verschillende codecsen (gebruikt bij het uitlezen vande XML file)
 import xmltodict                #Dit importeert de xmltodict module om xml bestanden in dictionaries te stoppen
