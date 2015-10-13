@@ -31,6 +31,7 @@ def Antwoord_API_van_Input():
                 # zet hij de informatie in dictionary i
                 vertrekkende_trein=dict(i)
                 print("Er vertrekt een trein met eindbestemming", vertrekkende_trein["EindBestemming"], " om:", vertrekkende_trein["VertrekTijd"][11:16])          # de vertrekkende_trein["VertrekTijd"][11:16] is nodig om alleen het uur en de minuten te printen en niet de rest
+                print("Het type van deze trein is: ", vertrekkende_trein["TreinSoort"], " en deze vertrekt vanaf spoor", vertrekkende_trein["VertrekSpoor"]["#text"])
 
     except:
         print("Ongeldige invoer, probeer het opnieuw")
