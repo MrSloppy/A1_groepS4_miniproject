@@ -5,9 +5,9 @@ import requests                 # dit importeert de requests module die nodig is
 
 # Deze gegevens worden naar de NS api gestuurd als authorisatie bij het request
 auth_details = ("timovanetten@hotmail.com", "_Z-_9y12emNNuHaR2cPrYsCSqJInO2n1R3_RRyD-h3hpIUoeseM37w")
-
+bestemming_input = input("Op welk Station bevind u zich?")
 # Dit is de request die je stuurt naar de API en het wordt opgeslagen in de variabele genaamd respons
-antwoord_API = requests.get("http://webservices.ns.nl/ns-api-avt?station=ut", auth=auth_details)
+antwoord_API = requests.get("http://webservices.ns.nl/ns-api-avt?station=%s" %bestemming_input, auth=auth_details)
 
 # Dit print het gehele antwoord wat je van de API terug krijgt
 print(antwoord_API.text)
@@ -35,7 +35,6 @@ def schrijf_xml(antwoord_API):
 # Nu roepen we de fucntie aanmaken_xml aan:
 schrijf_xml(antwoord_API)
 
-bestemming_input = input("Wat is uw eindbestemming?")
 #Dit importeert de xmltodict module om xml bestanden in dictionaries te stoppen
 import xmltodict
 
@@ -53,3 +52,5 @@ for i in stations_dict["ActueleVertrekTijden"]["VertrekkendeTrein"]:
     if vertrekkende_trein["EindBestemming"] == str(bestemming_input):
         # print vervolgens wanneer de if statement geldt worden de volgende gegevens geprint:
         print("Er vertrekt een trein met eindbestemming ", vertrekkende_trein["EindBestemming"], " om:", vertrekkende_trein["VertrekTijd"][11:16])          # de vertrekkende_trein["VertrekTijd"][11:16] is nodig om alleen het uur en de minuten te printen en niet de rest
+
+
