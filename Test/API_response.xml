@@ -5,100 +5,8 @@
 <ActueleVertrekTijden>
 
 	<VertrekkendeTrein>
-		<RitNummer>7647</RitNummer>
-		<VertrekTijd>2015-10-13T14:03:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Zutphen</EindBestemming>
-		<TreinSoort>Sprinter</TreinSoort>
-		
-			<RouteTekst>Elst, Arnhem</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>32249</RitNummer>
-		<VertrekTijd>2015-10-13T14:08:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Roermond</EindBestemming>
-		<TreinSoort>Stoptrein</TreinSoort>
-		
-			<RouteTekst>Boxmeer, Venlo</RouteTekst>
-		
-		
-			<Vervoerder>Veolia</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">1b</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>3048</RitNummer>
-		<VertrekTijd>2015-10-13T14:12:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Den Helder</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Arnhem, Utrecht C, Amsterdam C.</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">1a</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>3649</RitNummer>
-		<VertrekTijd>2015-10-13T14:17:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Roosendaal</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Oss, s-Hertogenbosch, Tilburg</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>3646</RitNummer>
-		<VertrekTijd>2015-10-13T14:18:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Zwolle</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Arnhem, Zutphen, Deventer</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
-		
-			<ReisTip>Stopt tot Arnhem op tussengelegen stations</ReisTip>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>4451</RitNummer>
-		<VertrekTijd>2015-10-13T14:23:00+0200</VertrekTijd>
+		<RitNummer>4457</RitNummer>
+		<VertrekTijd>2015-10-13T15:53:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Deurne</EindBestemming>
@@ -115,8 +23,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>32349</RitNummer>
-		<VertrekTijd>2015-10-13T14:23:00+0200</VertrekTijd>
+		<RitNummer>32355</RitNummer>
+		<VertrekTijd>2015-10-13T15:53:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Venray</EindBestemming>
@@ -133,8 +41,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>3150</RitNummer>
-		<VertrekTijd>2015-10-13T14:27:00+0200</VertrekTijd>
+		<RitNummer>3156</RitNummer>
+		<VertrekTijd>2015-10-13T15:57:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Schiphol</EindBestemming>
@@ -145,14 +53,14 @@
 		
 			<Vervoerder>NS</Vervoerder>
 		
-		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
+		<VertrekSpoor wijziging="false">1a</VertrekSpoor>
 		
 		
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>7649</RitNummer>
-		<VertrekTijd>2015-10-13T14:33:00+0200</VertrekTijd>
+		<RitNummer>7655</RitNummer>
+		<VertrekTijd>2015-10-13T16:03:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Zutphen</EindBestemming>
@@ -169,8 +77,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>17652</RitNummer>
-		<VertrekTijd>2015-10-13T14:37:00+0200</VertrekTijd>
+		<RitNummer>17658</RitNummer>
+		<VertrekTijd>2015-10-13T16:07:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Wijchen</EindBestemming>
@@ -185,8 +93,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>32251</RitNummer>
-		<VertrekTijd>2015-10-13T14:38:00+0200</VertrekTijd>
+		<RitNummer>32257</RitNummer>
+		<VertrekTijd>2015-10-13T16:08:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Roermond</EindBestemming>
@@ -203,8 +111,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>3050</RitNummer>
-		<VertrekTijd>2015-10-13T14:42:00+0200</VertrekTijd>
+		<RitNummer>3056</RitNummer>
+		<VertrekTijd>2015-10-13T16:12:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Den Helder</EindBestemming>
@@ -221,8 +129,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>3651</RitNummer>
-		<VertrekTijd>2015-10-13T14:47:00+0200</VertrekTijd>
+		<RitNummer>3657</RitNummer>
+		<VertrekTijd>2015-10-13T16:17:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Roosendaal</EindBestemming>
@@ -239,8 +147,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>3648</RitNummer>
-		<VertrekTijd>2015-10-13T14:48:00+0200</VertrekTijd>
+		<RitNummer>3654</RitNummer>
+		<VertrekTijd>2015-10-13T16:18:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Zwolle</EindBestemming>
@@ -259,8 +167,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>4453</RitNummer>
-		<VertrekTijd>2015-10-13T14:53:00+0200</VertrekTijd>
+		<RitNummer>4459</RitNummer>
+		<VertrekTijd>2015-10-13T16:23:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Deurne</EindBestemming>
@@ -277,8 +185,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>32351</RitNummer>
-		<VertrekTijd>2015-10-13T14:53:00+0200</VertrekTijd>
+		<RitNummer>32357</RitNummer>
+		<VertrekTijd>2015-10-13T16:23:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Venray</EindBestemming>
@@ -295,8 +203,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>3152</RitNummer>
-		<VertrekTijd>2015-10-13T14:57:00+0200</VertrekTijd>
+		<RitNummer>3158</RitNummer>
+		<VertrekTijd>2015-10-13T16:27:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Schiphol</EindBestemming>
@@ -308,6 +216,150 @@
 			<Vervoerder>NS</Vervoerder>
 		
 		<VertrekSpoor wijziging="false">1a</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>7657</RitNummer>
+		<VertrekTijd>2015-10-13T16:33:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Zutphen</EindBestemming>
+		<TreinSoort>Sprinter</TreinSoort>
+		
+			<RouteTekst>Elst, Arnhem</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>17660</RitNummer>
+		<VertrekTijd>2015-10-13T16:37:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Wijchen</EindBestemming>
+		<TreinSoort>Sprinter</TreinSoort>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>32259</RitNummer>
+		<VertrekTijd>2015-10-13T16:38:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Roermond</EindBestemming>
+		<TreinSoort>Stoptrein</TreinSoort>
+		
+			<RouteTekst>Boxmeer, Venlo</RouteTekst>
+		
+		
+			<Vervoerder>Veolia</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">1b</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>3058</RitNummer>
+		<VertrekTijd>2015-10-13T16:42:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Den Helder</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		
+			<RouteTekst>Arnhem, Utrecht C, Amsterdam C.</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">1a</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>3659</RitNummer>
+		<VertrekTijd>2015-10-13T16:47:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Roosendaal</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		
+			<RouteTekst>Oss, s-Hertogenbosch, Tilburg</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>3656</RitNummer>
+		<VertrekTijd>2015-10-13T16:48:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Zwolle</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		
+			<RouteTekst>Arnhem, Zutphen, Deventer</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
+		
+			<ReisTip>Stopt tot Arnhem op tussengelegen stations</ReisTip>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>4461</RitNummer>
+		<VertrekTijd>2015-10-13T16:53:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Deurne</EindBestemming>
+		<TreinSoort>Sprinter</TreinSoort>
+		
+			<RouteTekst>Oss, s-Hertogenbosch, Boxtel</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">4b</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>32359</RitNummer>
+		<VertrekTijd>2015-10-13T16:53:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Venray</EindBestemming>
+		<TreinSoort>Stoptrein</TreinSoort>
+		
+			<RouteTekst>Boxmeer</RouteTekst>
+		
+		
+			<Vervoerder>Veolia</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">35</VertrekSpoor>
 		
 		
 	</VertrekkendeTrein>
