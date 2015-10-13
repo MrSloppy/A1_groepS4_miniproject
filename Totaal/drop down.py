@@ -1,10 +1,20 @@
-__author__ = 'Maarten'
+from tkinter import Tk, StringVar, ttk
 
-from tkinter import * #tkinter GUI importen
+class Dropdown:
 
-root = Tk() #tkinter scherm aanmaken
-root.resizable(width=FALSE, height=FALSE)
-root.geometry('{}x{}'.format(800, 600))
-root.Listbox
+    def __init__(self, parent):
+        self.parent = parent
+        self.combo()
 
-root.mainloop() #een mainloop aan het scherm toevoegen zodat het scherm blijft runnen
+    def combo(self):
+        self.box_value = StringVar()
+        self.box = ttk.Combobox(self.parent, textvariable=self.box_value, 
+                                state='readonly')
+        self.box['values'] = ('A', 'B', 'C')
+        self.box.current(0)
+        self.box.grid(column=0, row=0)
+
+if __name__ == '__main__':
+    root = Tk()
+    app = Dropdown(root)
+    root.mainloop()
