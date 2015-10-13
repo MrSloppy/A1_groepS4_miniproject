@@ -30,8 +30,14 @@ def Antwoord_API_van_Input():
         for i in stations_dict["ActueleVertrekTijden"]["VertrekkendeTrein"]:
                 # zet hij de informatie in dictionary i
                 vertrekkende_trein=dict(i)
-                print("Er vertrekt een trein met eindbestemming", vertrekkende_trein["EindBestemming"], " om:", vertrekkende_trein["VertrekTijd"][11:16])          # de vertrekkende_trein["VertrekTijd"][11:16] is nodig om alleen het uur en de minuten te printen en niet de rest
-                print("Het type van deze trein is: ", vertrekkende_trein["TreinSoort"], " en deze vertrekt vanaf spoor", vertrekkende_trein["VertrekSpoor"]["#text"])
+
+                # Hier worden wat variabele vast gelegd voor gebruiksgemak voor later
+                eindbestemming = vertrekkende_trein["EindBestemming"]
+                vertrektijd = vertrekkende_trein["VertrekTijd"][11:16]          # de vertrekkende_trein["VertrekTijd"][11:16] is nodig om alleen het uur en de minuten te printen en niet de rest
+                treinsoort = vertrekkende_trein["TreinSoort"]
+                spoor = vertrekkende_trein["VertrekSpoor"]["#text"]
+                print("Er vertrekt een trein met eindbestemming", eindbestemming, " om:", vertrektijd)
+                print("Het type van deze trein is: ", treinsoort, " en deze vertrekt vanaf spoor", spoor)
 
     except:
         print("Ongeldige invoer, probeer het opnieuw")
@@ -43,7 +49,6 @@ def Antwoord_API_van_Input():
 def schrijf_xml(antwoord_API):
 
     # Hiermee wordt het bestand API_reposnse.mxl geöpend met schrijf bevoegdheid
-
     bestand = codecs.open("API_response.xml", 'w', 'utf-8')
 
     # Hiermee geef je het commando om het bestand met de volgende info te schrijven
