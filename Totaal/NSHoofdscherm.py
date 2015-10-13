@@ -1,8 +1,12 @@
 from tkinter import * #tkinter GUI importen
 
+root = Tk() #tkinter scherm aanmaken
 TITLE_FONT = ("helvetica", 40, "bold") #
 
-root = Tk() #tkinter scherm aanmaken
+ #een foto toevoegen aan dit bestand
+photo1 = PhotoImage(file="Welkomsttekst.png")
+
+
 root.resizable(width=FALSE, height=FALSE) #je geeft aaan dat je de root(Tk) niet kan veranderen qua grootte
 root.geometry('{}x{}'.format(800, 600)) #je geeft de grootte van de box (Tk) aan en met x en y
 
@@ -16,6 +20,8 @@ label1 = Label(root,height=3, font=TITLE_FONT,  text="Welkom bij NS", bg="#FFCC0
 label1.pack(fill=X)
 label2 = Label(root,  bg="#000066",  bd = 13,  anchor = W)
 label2.pack(side = BOTTOM, fill = X)
+label3 = Label(root, image=photo1)
+label3.pack()
 
 
 
