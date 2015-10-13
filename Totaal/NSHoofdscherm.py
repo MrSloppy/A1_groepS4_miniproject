@@ -5,7 +5,7 @@ root = Tk() #tkinter scherm aanmaken
 
 
 TITLE_FONT = ("helvetica", 40, "bold") #
-
+Buttonfont=("helvetica", 16)
 
 
 #een foto toevoegen aan dit bestand
@@ -29,24 +29,24 @@ label1.pack(fill=X) #je vult de hele x waarde/breedte van de label
 label2 = Label(root, image=photo5,  bg="#00246B",  bd = 13,  anchor = W)
 label2.pack(side = BOTTOM)
 
-label3 = Label(root, image=photo1) #je zet een foto in de label waarvan je eerder de naam had gegeven
+label3 = Label(root, image=photo1, bg="#FFCC00") #je zet een foto in de label waarvan je eerder de naam had gegeven
 label3.pack(side=TOP)
 
     #Dit zijn de buttons die worden gebruikt voor de main menu
 
-Button1 = Button(root, height = 5, width = 20, text="Ik wil naar Amsterdam", bg = "#00246B", fg ="white")
+Button1 = Button(root, wraplength=129, width = 12, text="Ik wil naar Amsterdam", bg = "#00246B", fg ="white", font = Buttonfont)
 Button1.pack()
 Button1.place(x=50, y=425)
 
-Button2 = Button(root,height = 5, width = 20, text="Kopen los kaartje", bg = "#00246B", fg ="white")
+Button2 = Button(root,wraplength=129, width = 12, text="Kopen los kaartje", bg = "#00246B", fg ="white", font = Buttonfont)
 Button2.pack()
 Button2.place(x=225, y=425)
 
-Button3 = Button(root,height = 5, width = 20, text="Kopen OV-chipkaart", bg = "#00246B", fg ="white") # hier moet een command
+Button3 = Button(root, wraplength=129,width = 12, text="Kopen OV-chipkaart", bg = "#00246B", fg ="white", font = Buttonfont) # hier moet een command
 Button3.pack()
 Button3.place(x=425, y=425)
 
-Button4 = Button(root, height = 5, width = 20, text="Ik wil naar het buitenland", bg = "#00246B", fg ="white")
+Button4 = Button(root, wraplength=129,width = 12, text="Ik wil naar het buitenland", bg = "#00246B", fg ="white", font = Buttonfont)
 Button4.pack()
 Button4.place(x=600, y=425)
 
