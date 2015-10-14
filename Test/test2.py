@@ -6,8 +6,6 @@ __version__ = "1.0"
 
 tkinter_umlauts=['odiaeresis', 'adiaeresis', 'udiaeresis', 'Odiaeresis', 'Adiaeresis', 'Udiaeresis', 'ssharp']
 
-from uitlezen_xml_met_api import *
-
 class AutocompleteEntry(tkinter.Entry):
         """
         Subclass of Tkinter.Entry that features autocompletion.
@@ -78,12 +76,12 @@ def test(test_list):
         root.mainloop()
 
 if __name__ == '__main__':
-        test_list = (u'test', u'type', u'true', u'tree', u'tölz')
+        test_list = (u'Utrecht Centraal', u'Utrecht Overvecht', u'Amsterdam', u'Rotterdam', u'tölz')
         print("Type a 't' to test the AutocompleteEntry widget.")
         print("Will use AutocompleteEntry.set_completion_list()")
         print("Try also the backspace key and the arrow keys.")
         test(test_list)
 
-Stations_Lijst_Maken()
+
 entry = AutocompleteEntry()
-entry.set_completion_list(Stations_Lijst_Maken().lijst_met_stations)
+entry.set_completion_list()

@@ -1,3 +1,4 @@
+__author__ = 'Timo'
 __author__ = 'Plz no pasterino'
 
 from tkinter import *
@@ -5,7 +6,6 @@ import requests                 # dit importeert de requests module die nodig is
 import codecs                   # dit inporteert de mogelijkheid om gebruik te maken van verschillende codecsen (gebruikt bij het uitlezen vande XML file)
 import xmltodict                #Dit importeert de xmltodict module om xml bestanden in dictionaries te stoppen
 
-import drop_down
 
 # Deze gegevens worden naar de NS api gestuurd als authorisatie bij het request
 auth_details = ("timovanetten@hotmail.com", "_Z-_9y12emNNuHaR2cPrYsCSqJInO2n1R3_RRyD-h3hpIUoeseM37w")
@@ -24,16 +24,15 @@ def Stations_Lijst_Maken():
     schrijf_xml(antwoord_API)                           # dit roept de functie schrijf_xml met de parameter antwoord_API aan
     stations_dict = xmltodict.parse(antwoord_API.text)
     global lijst_met_stations                           # dit maakt de lijst_met_stations globaal zodat hij later nog kan worden aangeroepen
-    lijst_met_stations = set([])                            # Dit is de lege set die zo gevuld gaat worden
+    lijst_met_stations = []                          # Dit is de lege set die zo gevuld gaat worden
+    global lijst_met_stationcodes
+    lijst_met_stationcodes = []
     for i in stations_dict["Stations"]["Station"]:      # Dit is de loop die door alle verzamelde informatie gaat onder de dictionaries ["Stations"]["Station"]
 
-        lijst_met_stations.add(i["Namen"]["Kort"])      # Dit voegt het station toe aan de tuple
 
-        lijst_met_stations.add(i["Namen"]["Middel"])    # Dit voegt het station toe aan de tuple
+        lijst_met_stations.append(i["Namen"]["Lang"])      # Dit voegt het station toe aan de tuple
 
-        lijst_met_stations.add(i["Namen"]["Lang"])      # Dit voegt het station toe aan de tuple
-
-
+        lijst_met_stationcodes.append(i["Code"])                # Dit is de afkorting van  het station
 
 
 
@@ -72,6 +71,8 @@ def Antwoord_API_van_Input():
                 treinsoort = vertrekkende_trein["TreinSoort"]
                 global spoor
                 spoor = vertrekkende_trein["VertrekSpoor"]["#text"]
+                global afkorting
+
 
                 # Hier worden de dictionaries gevuld om voor later gebruik in de GUI
                 global eindbestemming_list
@@ -115,3 +116,26 @@ Antwoord_API_van_Input()                        # Dit voert de functie Antwoord_
 
 print(spoor_list)
 print(treinsoort_list)
+print(lijst_met_stationcodes)
+from tkinter import Tk, StringVar, ttk
+
+class Dropdown:
+
+    def __init__(self, parent):
+        self.parent = parent
+        self.combo()
+
+    def combo(self):
+        self.box_value = StringVar()
+        self.box = ttk.Combobox(self.parent, textvariable=self.box_value,
+                                state='readonly')
+
+        self.box['values'] = (lijst_met_stations)
+        self.box.current(0)
+        self.box.grid(column=0, row=0)
+
+if __name__ == '__main__':
+    root = Tk()
+    app = Dropdown(root)
+    root.mainloop()
+

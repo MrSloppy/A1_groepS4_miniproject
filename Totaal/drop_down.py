@@ -1,5 +1,7 @@
 from tkinter import Tk, StringVar, ttk
 
+test_lijst_plz = ["E", "D", "F"]
+
 class Dropdown:
 
     def __init__(self, parent):
@@ -10,7 +12,8 @@ class Dropdown:
         self.box_value = StringVar()
         self.box = ttk.Combobox(self.parent, textvariable=self.box_value, 
                                 state='readonly')
-        self.box['values'] = ('A', 'B', 'C')
+
+        self.box['values'] = (test_lijst_plz)
         self.box.current(0)
         self.box.grid(column=0, row=0)
 
