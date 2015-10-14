@@ -8,6 +8,11 @@ import xmltodict                #Dit importeert de xmltodict module om xml besta
 # Deze gegevens worden naar de NS api gestuurd als authorisatie bij het request
 auth_details = ("timovanetten@hotmail.com", "_Z-_9y12emNNuHaR2cPrYsCSqJInO2n1R3_RRyD-h3hpIUoeseM37w")
 
+spoor_list = []
+eindbestemming_list = []
+vertrektijd_list = []
+treinsoort_list = []
+
 # Deze fuctie is geschreven om een lijst met alle stations en schrijftypes in te vullen in een tuple
 def Stations_Lijst_Maken():
 
@@ -17,7 +22,7 @@ def Stations_Lijst_Maken():
     schrijf_xml(antwoord_API)                           # dit roept de functie schrijf_xml met de parameter antwoord_API aan
     stations_dict = xmltodict.parse(antwoord_API.text)
     global lijst_met_stations                           # dit maakt de lijst_met_stations globaal zodat hij later nog kan worden aangeroepen
-    lijst_met_stations = set([])                        # Dit is de lege set die zo gevuld gaat worden
+    lijst_met_stations = set([])                            # Dit is de lege set die zo gevuld gaat worden
     for i in stations_dict["Stations"]["Station"]:      # Dit is de loop die door alle verzamelde informatie gaat onder de dictionaries ["Stations"]["Station"]
 
         lijst_met_stations.add(i["Namen"]["Kort"])      # Dit voegt het station toe aan de tuple
@@ -44,6 +49,7 @@ def Antwoord_API_van_Input():
 
     # Dit stelt de dictionary stations_dict vast met de inhoud van antwoord_API.text
     # Iedere XML elemental is nu hierarchisch onderverdeeld in dictonaries
+    global stations_dict
     stations_dict = xmltodict.parse(antwoord_API.text)
 
     # Deze loop loopt door de aangemaakte dictioanry stations_dict
@@ -62,6 +68,16 @@ def Antwoord_API_van_Input():
                 treinsoort = vertrekkende_trein["TreinSoort"]
                 global spoor
                 spoor = vertrekkende_trein["VertrekSpoor"]["#text"]
+
+                # Hier worden de dictionaries gevuld om voor later gebruik in de GUI
+                global eindbestemming_list
+                eindbestemming_list.append(eindbestemming)
+                global vertrektijd_list
+                vertrektijd_list.append(vertrektijd)
+                global treinsoort_list
+                treinsoort_list.append(treinsoort)
+                global spoor_list
+                spoor_list.append(spoor)
 
                 print("Er vertrekt een trein met eindbestemming", eindbestemming, " om:", vertrektijd)          # Dit print de gevraagde informatie
                 print("Het type van deze trein is: ", treinsoort, " en deze vertrekt vanaf spoor", spoor)       # Dit print de rest van de gevraagde informatie
@@ -92,3 +108,6 @@ print(lijst_met_stations)                       # dit print de lijst_met_station
 print(len(lijst_met_stations))                  # dit print de lengte van de lijst_met_stations
 
 Antwoord_API_van_Input()                        # Dit voert de functie Antwoord_API_van_Input()
+
+print(spoor_list)
+print(treinsoort_list)

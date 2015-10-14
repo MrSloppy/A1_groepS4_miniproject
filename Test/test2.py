@@ -1,21 +1,18 @@
-__author__ = 'Timo'
-
-
 import sys
 import os
+import tkinter
 from tkinter import *
-from uitlezen_xml_met_api import *
-# suppose that in function1, there is mylib.py file so
+__version__ = "1.0"
 
-root = Tk()
-uitlezen_xml_met_api.Stations_Lijst_Maken()
 tkinter_umlauts=['odiaeresis', 'adiaeresis', 'udiaeresis', 'Odiaeresis', 'Adiaeresis', 'Udiaeresis', 'ssharp']
 
-class AutocompleteEntry(Tk.Entry):
+from uitlezen_xml_met_api import *
+
+class AutocompleteEntry(tkinter.Entry):
         """
         Subclass of Tkinter.Entry that features autocompletion.
-
-        To enable autocompletion use set_completion_list(list) to define
+        
+        To enable autocompletion use set_completion_list(list) to define 
         a list of possible strings to hit.
         To cycle through hits use down and up arrow keys.
         """
@@ -24,7 +21,7 @@ class AutocompleteEntry(Tk.Entry):
                 self._hits = []
                 self._hit_index = 0
                 self.position = 0
-                self.bind('<KeyRelease>', self.handle_keyrelease)
+                self.bind('<KeyRelease>', self.handle_keyrelease)               
 
         def autocomplete(self, delta=0):
                 """autocomplete the Entry, delta may be 0/1/-1 to cycle through possible hits"""
@@ -48,8 +45,8 @@ class AutocompleteEntry(Tk.Entry):
                 if self._hits:
                         self.delete(0,tkinter.END)
                         self.insert(0,self._hits[self._hit_index])
-                        self.select_range(self.position,Tk.END)
-
+                        self.select_range(self.position,tkinter.END)
+                        
         def handle_keyrelease(self, event):
                 """event handler for the keyrelease event on this widget"""
                 if event.keysym == "BackSpace":
@@ -73,7 +70,7 @@ class AutocompleteEntry(Tk.Entry):
 
 def test(test_list):
         """Run a mini application to test the AutocompleteEntry Widget."""
-        root = Tk(className=' AutocompleteEntry demo')
+        root = tkinter.Tk(className=' AutocompleteEntry demo')
         entry = AutocompleteEntry(root)
         entry.set_completion_list(test_list)
         entry.pack()
@@ -82,14 +79,11 @@ def test(test_list):
 
 if __name__ == '__main__':
         test_list = (u'test', u'type', u'true', u'tree', u'tölz')
-        print(u"Type a 't' to test the AutocompleteEntry widget.")
-        print(u"Will use AutocompleteEntry.set_completion_list(%s)" % unicode(test_list))
-        print(u"Try also the backspace key and the arrow keys.")
+        print("Type a 't' to test the AutocompleteEntry widget.")
+        print("Will use AutocompleteEntry.set_completion_list()")
+        print("Try also the backspace key and the arrow keys.")
         test(test_list)
 
-
-entry = AutocompleteEntry(root)
-
-entry.set_completion_list(uitlezen_xml_met_api.lijst_met_stations)
-
-root.mainloop()
+Stations_Lijst_Maken()
+entry = AutocompleteEntry()
+entry.set_completion_list(Stations_Lijst_Maken().lijst_met_stations)
