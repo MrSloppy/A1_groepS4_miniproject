@@ -4,7 +4,7 @@ __author__ = 'Timo'
 import sys
 import os
 from tkinter import *
-import uitlezen_xml_met_api
+from uitlezen_xml_met_api import *
 # suppose that in function1, there is mylib.py file so
 
 
@@ -47,7 +47,7 @@ class AutocompleteEntry(Tk.Entry):
                 if self._hits:
                         self.delete(0,tkinter.END)
                         self.insert(0,self._hits[self._hit_index])
-                        self.select_range(self.position,tkinter.END)
+                        self.select_range(self.position,Tk.END)
 
         def handle_keyrelease(self, event):
                 """event handler for the keyrelease event on this widget"""
