@@ -10,7 +10,7 @@ import uitlezen_xml_met_api
 
 tkinter_umlauts=['odiaeresis', 'adiaeresis', 'udiaeresis', 'Odiaeresis', 'Adiaeresis', 'Udiaeresis', 'ssharp']
 
-class AutocompleteEntry(Tkinter.Entry):
+class AutocompleteEntry(Tk.Entry):
         """
         Subclass of Tkinter.Entry that features autocompletion.
 
@@ -28,7 +28,7 @@ class AutocompleteEntry(Tkinter.Entry):
         def autocomplete(self, delta=0):
                 """autocomplete the Entry, delta may be 0/1/-1 to cycle through possible hits"""
                 if delta: # need to delete selection otherwise we would fix the current position
-                        self.delete(self.position, Tkinter.END)
+                        self.delete(self.position, tkinter.END)
                 else: # set position to end so selection starts where textentry ended
                         self.position = len(self.get())
                 # collect hits
@@ -45,23 +45,23 @@ class AutocompleteEntry(Tkinter.Entry):
                         self._hit_index = (self._hit_index + delta) % len(self._hits)
                 # now finally perform the auto completion
                 if self._hits:
-                        self.delete(0,Tkinter.END)
+                        self.delete(0,tkinter.END)
                         self.insert(0,self._hits[self._hit_index])
-                        self.select_range(self.position,Tkinter.END)
+                        self.select_range(self.position,tkinter.END)
 
         def handle_keyrelease(self, event):
                 """event handler for the keyrelease event on this widget"""
                 if event.keysym == "BackSpace":
-                        self.delete(self.index(Tkinter.INSERT), Tkinter.END)
-                        self.position = self.index(Tkinter.END)
+                        self.delete(self.index(tkinter.INSERT), tkinter.END)
+                        self.position = self.index(tkinter.END)
                 if event.keysym == "Left":
-                        if self.position < self.index(Tkinter.END): # delete the selection
-                                self.delete(self.position, Tkinter.END)
+                        if self.position < self.index(tkinter.END): # delete the selection
+                                self.delete(self.position, tkinter.END)
                         else:
                                 self.position = self.position-1 # delete one character
-                                self.delete(self.position, Tkinter.END)
+                                self.delete(self.position, tkinter.END)
                 if event.keysym == "Right":
-                        self.position = self.index(Tkinter.END) # go to end (no selection)
+                        self.position = self.index(tkinter.END) # go to end (no selection)
                 if event.keysym == "Down":
                         self.autocomplete(1) # cycle to next hit
                 if event.keysym == "Up":
@@ -85,8 +85,11 @@ if __name__ == '__main__':
         print(u"Will use AutocompleteEntry.set_completion_list(%s)" % unicode(test_list))
         print(u"Try also the backspace key and the arrow keys.")
         test(test_list)
+
 root = Tk()
-pan = Frame(root)
-root.mainloop()
+uitlezen_xml_met_api.Stations_Lijst_Maken()
 entry = AutocompleteEntry(root)
-entry.set_completion_list(lijst_met_stations)
+
+entry.set_completion_list(uitlezen_xml_met_api.lijst_met_stations)
+
+root.mainloop()

@@ -5,26 +5,8 @@
 <ActueleVertrekTijden>
 
 	<VertrekkendeTrein>
-		<RitNummer>5855</RitNummer>
-		<VertrekTijd>2015-10-13T16:06:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Amersfoort Vathorst</EindBestemming>
-		<TreinSoort>Sprinter</TreinSoort>
-		
-			<RouteTekst>Amersfoort</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">3</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>5554</RitNummer>
-		<VertrekTijd>2015-10-13T16:21:00+0200</VertrekTijd>
+		<RitNummer>5538</RitNummer>
+		<VertrekTijd>2015-10-14T12:21:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Utrecht Centraal</EindBestemming>
@@ -41,8 +23,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>5854</RitNummer>
-		<VertrekTijd>2015-10-13T16:23:00+0200</VertrekTijd>
+		<RitNummer>5838</RitNummer>
+		<VertrekTijd>2015-10-14T12:23:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Hoofddorp</EindBestemming>
@@ -59,8 +41,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>5857</RitNummer>
-		<VertrekTijd>2015-10-13T16:36:00+0200</VertrekTijd>
+		<RitNummer>5841</RitNummer>
+		<VertrekTijd>2015-10-14T12:36:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Amersfoort Vathorst</EindBestemming>
@@ -77,8 +59,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>5556</RitNummer>
-		<VertrekTijd>2015-10-13T16:51:00+0200</VertrekTijd>
+		<RitNummer>5540</RitNummer>
+		<VertrekTijd>2015-10-14T12:51:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Utrecht Centraal</EindBestemming>
@@ -95,8 +77,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>5856</RitNummer>
-		<VertrekTijd>2015-10-13T16:53:00+0200</VertrekTijd>
+		<RitNummer>5840</RitNummer>
+		<VertrekTijd>2015-10-14T12:53:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Hoofddorp</EindBestemming>
@@ -113,8 +95,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>5859</RitNummer>
-		<VertrekTijd>2015-10-13T17:07:00+0200</VertrekTijd>
+		<RitNummer>5843</RitNummer>
+		<VertrekTijd>2015-10-14T13:06:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Amersfoort Vathorst</EindBestemming>
@@ -131,8 +113,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>5558</RitNummer>
-		<VertrekTijd>2015-10-13T17:21:00+0200</VertrekTijd>
+		<RitNummer>5542</RitNummer>
+		<VertrekTijd>2015-10-14T13:21:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Utrecht Centraal</EindBestemming>
@@ -149,8 +131,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>5858</RitNummer>
-		<VertrekTijd>2015-10-13T17:23:00+0200</VertrekTijd>
+		<RitNummer>5842</RitNummer>
+		<VertrekTijd>2015-10-14T13:23:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Hoofddorp</EindBestemming>
@@ -167,8 +149,8 @@
 	</VertrekkendeTrein>
 
 	<VertrekkendeTrein>
-		<RitNummer>5861</RitNummer>
-		<VertrekTijd>2015-10-13T17:36:00+0200</VertrekTijd>
+		<RitNummer>5845</RitNummer>
+		<VertrekTijd>2015-10-14T13:36:00+0200</VertrekTijd>
 		
 		
 		<EindBestemming>Amersfoort Vathorst</EindBestemming>
@@ -180,6 +162,24 @@
 			<Vervoerder>NS</Vervoerder>
 		
 		<VertrekSpoor wijziging="false">3</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>5544</RitNummer>
+		<VertrekTijd>2015-10-14T13:51:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Utrecht Centraal</EindBestemming>
+		<TreinSoort>Sprinter</TreinSoort>
+		
+			<RouteTekst>Soest, Den Dolder, Overvecht</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">4</VertrekSpoor>
 		
 		
 	</VertrekkendeTrein>
