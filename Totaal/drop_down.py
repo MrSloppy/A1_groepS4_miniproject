@@ -10,7 +10,7 @@ class Dropdown:
 
     def combo(self):
         self.box_value = StringVar()
-        self.box = ttk.Combobox(self.parent, textvariable=self.box_value, 
+        self.box = ttk.Combobox(self.parent, textvariable=self.box_value,
                                 state='readonly')
 
         self.box['values'] = (test_lijst_plz)
