@@ -1,4 +1,6 @@
 from tkinter import *
+#from tkinter.ttk import *
+from tkinter import ttk
 
 
 
@@ -24,15 +26,30 @@ def venster3(event):
     HuidigStation.pack()
     height = 10
     width = 5
-    for i in range(height): #Rows
-    for j in range(width): #Columns
-        b = Entry(root, text="")
-        b.grid(row=i, column=j)
+    #mainframe = ttk.Frame(root)
+    #mainframe.grid(column = 0, row = 0)
+    # Label(root, text="blabla").grid(row=1)
+    # for i in range(height): #Rows
+    #     for j in range(width): #Columns
+    #             b = Entry(root)
+    #             b.grid(row=i, column=j)
 
 def venster4(event):
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
+    Button9.place(x=150,y=470)
     AnderStation.pack()
+
+def venster5(event):
+    Button1.place(x=1000,y=1000)
+    Button2.place(x=1000,y=1000)
+    Button3.place(x=1000,y=1000)
+    Button4.place(x=1000,y=1000)
+    Button5.place(x=1000,y=1000)
+    Button9.place(x=1000, y=1000)
+    label1.pack_forget()
+    label2.pack(side=BOTTOM)
+    label3.place(x=2000,y=2000)
 
 def reset(event):
     label1.pack()
@@ -44,6 +61,7 @@ def reset(event):
     Button5.place(x=650, y=425)
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000,y=1000)
+    Button9.place(x=1000,y=1000)
     label2.pack(side=BOTTOM)
     Button8.place(x=1000,y=1000)
     HuidigStation.pack_forget()
@@ -64,9 +82,11 @@ def venster1():
     global HuidigStation
     global Button8
     global AnderStation
+    global Button9
+    global gegevens
 
     root = Tk()
-    root.resizable(width=False, height=False)
+    root.resizable(width=0, height=0)
     root.geometry("800x600")
     root.config(bg="gold")
 
@@ -78,6 +98,9 @@ def venster1():
 
     AnderStation = Label(root, height=3, bg="gold", fg="darkblue", text="Selecteer een ander station", font=Gfont)
     AnderStation.pack_forget()
+
+    gegevens = Label(root, height=3, bg="gold", fg="darkblue", text="gegevens", font=Gfont)
+    gegevens.pack_forget()
 
     Button1 = Button(root, wraplength=129, width = 12, text="Ik wil naar Amsterdam", bg = "#00246B", fg ="white", font = Buttonfont)
     Button1.pack()
@@ -125,6 +148,12 @@ def venster1():
     Button8.bind('<Button-1>', reset)
     Button8.pack()
     Button8.place(x=1000,y=1000)
+
+    Button9 = Button(root, wraplength=125, justify=LEFT, text="Gegevens",bg = "#00246B", fg = "white",font = Buttonfont, width=10)
+    Button9.bind('<Button-1>', venster5)
+    Button9.pack()
+    Button9.place(x=1000,y=1000)
+
 
     root.mainloop()
 
