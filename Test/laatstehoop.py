@@ -42,7 +42,9 @@ def Antwoord_API_van_Input():
 
     bestemming_input = input("Op welk Station bevind u zich?")
     # Dit is de request die je stuurt naar de API en het wordt opgeslagen in de variabele genaamd antwoord_API
-    antwoord_API = requests.get("http://webservices.ns.nl/ns-api-avt?station={}".format(bestemming_input), auth=auth_details)
+    code_van_station = lijst_met_stations.index(bestemming_input)
+    station_code = lijst_met_stationcodes[code_van_station]
+    antwoord_API = requests.get("http://webservices.ns.nl/ns-api-avt?station={}".format(station_code), auth=auth_details)
 
     # Dit print het gehele antwoord wat je van de API terug krijgt
     print(antwoord_API.text)
