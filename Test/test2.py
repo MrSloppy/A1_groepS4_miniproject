@@ -6,8 +6,7 @@ __version__ = "1.0"
 
 tkinter_umlauts=['odiaeresis', 'adiaeresis', 'udiaeresis', 'Odiaeresis', 'Adiaeresis', 'Udiaeresis', 'ssharp']
 
-
-from uitlezen_xml_met_api import Stations_Lijst_Maken
+from uitlezen_xml_met_api import *
 
 class AutocompleteEntry(tkinter.Entry):
         """
@@ -85,7 +84,6 @@ if __name__ == '__main__':
         print("Try also the backspace key and the arrow keys.")
         test(test_list)
 
-
-
+Stations_Lijst_Maken()
 entry = AutocompleteEntry()
-entry.set_completion_list(["a", "abc"])
+entry.set_completion_list(Stations_Lijst_Maken().lijst_met_stations)
