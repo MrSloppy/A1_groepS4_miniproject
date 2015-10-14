@@ -2,19 +2,21 @@ from tkinter import *
 
 
 
-Gfont=("arial", 45, "bold")
-Buttonfont=("arial", 16)
+Gfont=("helvetica", 40, "bold")
+Buttonfont=("helvetica", 16)
 
 def venster2(event):
     Button1.place(x=1000,y=1000)
     Button2.place(x=1000,y=1000)
     Button3.place(x=1000,y=1000)
     Button4.place(x=1000,y=1000)
+    Button5.place(x=1000,y=1000)
     label1.pack_forget()
-    label2.place(x=2000,y=2000)
+    label2.pack(side=BOTTOM)
+    label3.place(x=2000,y=2000)
     Button6.place(x=200, y=300)
     Button7.place(x=400, y=300)
-    Button8.place(x=650,y=530)
+    Button8.place(x=650,y=470)
 
 def venster3(event):
     Button6.place(x=1000,y=1000)
@@ -28,10 +30,12 @@ def venster4(event):
 
 def reset(event):
     label1.pack()
-    Button1.place(x=50,y=425)
-    Button2.place(x=225,y=425)
-    Button3.place(x=425,y=425)
-    Button4.place(x=600,y=425)
+    label3.pack()
+    Button1.place(x=0,y=425)
+    Button2.place(x=160,y=425)
+    Button3.place(x=325,y=425)
+    Button4.place(x=490,y=425)
+    Button5.place(x=650, y=425)
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000,y=1000)
     label2.pack(side=BOTTOM)
@@ -46,7 +50,9 @@ def venster1():
     global Button2
     global Button3
     global Button4
+    global Button5
     global label2
+    global label3
     global Button6
     global Button7
     global HuidigStation
@@ -61,7 +67,7 @@ def venster1():
     label1 = Label(root, height=3, bg="gold", fg="darkblue", text="Welkom bij de NS", font=Gfont)
     label1.pack()
 
-    HuidigStation = Label(root, height=3, bg="gold", fg="darkblue", text="Huidig Station", font=Gfont)
+    HuidigStation = Label(root, height=3, bg="gold", fg="darkblue", text="info huidig Station", font=Gfont)
     HuidigStation.pack_forget()
 
     AnderStation = Label(root, height=3, bg="gold", fg="darkblue", text="Selecteer een ander station", font=Gfont)
@@ -83,18 +89,18 @@ def venster1():
     Button4.pack()
     Button4.place(x=490, y=425)
 
-    Button5 = Button(root, wraplength=129,width = 12, text="Reis informatie", bg = "red", fg ="white", font = Buttonfont)
+    Button5 = Button(root, wraplength=129,width = 12, text="Reis informatie", bg = "#00246B", fg ="white", font = Buttonfont)
     Button5.bind('<Button-1>', venster2)
     Button5.pack()
     Button5.place(x=650, y=425)
     #Dropdownmenu
 
-    Button6 = Button(root, wraplength=125, justify=LEFT, text="Info voor huidig station",bg = "darkblue", fg = "white",font = Buttonfont, width=10)
+    Button6 = Button(root, wraplength=125, justify=LEFT, text="Info huidig station",bg = "#00246B", fg = "white",font = Buttonfont, width=10)
     Button6.bind('<Button-1>', venster3)
     Button6.pack()
     Button6.place(x=1000,y=1000)
 
-    Button7 = Button(root, wraplength=125, justify=LEFT, text="Info voor ander station",bg = "darkblue", fg = "white",font = Buttonfont, width=10)
+    Button7 = Button(root, wraplength=125, justify=LEFT, text="Info ander station",bg = "#00246B", fg = "white",font = Buttonfont, width=10)
     Button7.bind('<Button-1>', venster4)
     Button7.pack()
     Button7.place(x=1000,y=1000)
@@ -109,7 +115,7 @@ def venster1():
     label3 = Label(root, image=photo1, bg="#FFCC00") #je zet een foto in de label waarvan je eerder de naam had gegeven
     label3.pack(side=TOP)
 
-    Button8 = Button(root, wraplength=125, justify=LEFT, text="Terug naar startscherm",bg = "darkblue", fg = "white",font = Buttonfont, width=10)
+    Button8 = Button(root, wraplength=125, justify=LEFT, text="Terug naar startscherm",bg = "#00246B", fg = "white",font = Buttonfont, width=10)
     Button8.bind('<Button-1>', reset)
     Button8.pack()
     Button8.place(x=1000,y=1000)
