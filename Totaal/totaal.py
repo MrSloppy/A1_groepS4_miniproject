@@ -21,12 +21,48 @@ def venster2(event):
     Button8.place(x=650,y=470)
 
 def venster3(event):
-    Button6.place(x=1000,y=1000)
-    Button7.place(x=1000, y=1000)
-    HuidigStation.pack()
+    master = Tk()
+    master.resizable(width=0, height=0)
+    master.geometry("800x600")
+    master.config(bg="gold")
 
+    label_huidig_station = Label(master, text = "Huidig station")
+    label_huidig_station.place(x=100, y=100)
+    label_Tijd0 = Label(master, text = "Tijd0")
+    label_Tijd0.place(x = 200, y= 150 )
+    label_Eindbestemming0 = Label(master, text = "Eindbestemming0")
+    label_Eindbestemming0.place(x = 300, y = 150)
+    label_Spoor0 = Label(master, text = "Spoor0")
+    label_Spoor0.place(x = 550, y = 150)
+    label_Typetrein0 = Label(master, text = "TypeTrein0")
+    label_Typetrein0.place(x= 320, y = 200)
 
-    Label(root, text="first").place(x=100, y=100)
+    label_Tijd1 = Label(master, text = "Tijd1")
+    label_Tijd1.place(x = 200, y= 250 )
+    label_Eindbestemming1 = Label(master, text = "Eindbestemming1")
+    label_Eindbestemming1.place(x = 300, y = 250)
+    label_Spoor1 = Label(master, text = "Spoor1")
+    label_Spoor1.place(x = 550, y = 250)
+    label_Typetrein1 = Label(master, text = "TypeTrein1")
+    label_Typetrein1.place(x= 320, y = 300)
+
+    label_Tijd2 = Label(master, text = "Tijd2")
+    label_Tijd2.place(x = 200, y= 350 )
+    label_Eindbestemming2 = Label(master, text = "Eindbestemming2")
+    label_Eindbestemming2.place(x = 300, y = 350)
+    label_Spoor2 = Label(master, text = "Spoor2")
+    label_Spoor2.place(x = 550, y = 350)
+    label_Typetrein2 = Label(master, text = "TypeTrein2")
+    label_Typetrein2.place(x= 320, y = 400)
+
+    label_Tijd3 = Label(master, text = "Tijd3")
+    label_Tijd3.place(x = 200, y= 450 )
+    label_Eindbestemming3 = Label(master, text = "Eindbestemming3")
+    label_Eindbestemming3.place(x = 300, y = 450)
+    label_Spoor3 = Label(master, text = "Spoor3")
+    label_Spoor3.place(x = 550, y = 450)
+    label_Typetrein3 = Label(master, text = "TypeTrein3")
+    label_Typetrein3.place(x= 320, y = 500)
 
 def venster4(event):
     Button6.place(x=1000,y=1000)
@@ -143,5 +179,7 @@ def venster1():
 
 
     root.mainloop()
+
+
 
 venster1()
