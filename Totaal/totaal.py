@@ -24,15 +24,9 @@ def venster3(event):
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
     HuidigStation.pack()
-    height = 10
-    width = 5
-    #mainframe = ttk.Frame(root)
-    #mainframe.grid(column = 0, row = 0)
-    # Label(root, text="blabla").grid(row=1)
-    # for i in range(height): #Rows
-    #     for j in range(width): #Columns
-    #             b = Entry(root)
-    #             b.grid(row=i, column=j)
+
+
+    Label(root, text="first").place(x=100, y=100)
 
 def venster4(event):
     Button6.place(x=1000,y=1000)
@@ -41,15 +35,8 @@ def venster4(event):
     AnderStation.pack()
 
 def venster5(event):
-    Button1.place(x=1000,y=1000)
-    Button2.place(x=1000,y=1000)
-    Button3.place(x=1000,y=1000)
-    Button4.place(x=1000,y=1000)
-    Button5.place(x=1000,y=1000)
-    Button9.place(x=1000, y=1000)
-    label1.pack_forget()
-    label2.pack(side=BOTTOM)
-    label3.place(x=2000,y=2000)
+    Button9.place(x=1000,y=1000)
+    AnderStation.pack_forget()
 
 def reset(event):
     label1.pack()
