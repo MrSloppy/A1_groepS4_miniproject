@@ -22,6 +22,12 @@ def venster3(event):
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
     HuidigStation.pack()
+    height = 10
+    width = 5
+    for i in range(height): #Rows
+    for j in range(width): #Columns
+        b = Entry(root, text="")
+        b.grid(row=i, column=j)
 
 def venster4(event):
     Button6.place(x=1000,y=1000)
