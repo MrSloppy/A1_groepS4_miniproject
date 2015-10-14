@@ -7,7 +7,8 @@ from tkinter import *
 from uitlezen_xml_met_api import *
 # suppose that in function1, there is mylib.py file so
 
-
+root = Tk()
+uitlezen_xml_met_api.Stations_Lijst_Maken()
 tkinter_umlauts=['odiaeresis', 'adiaeresis', 'udiaeresis', 'Odiaeresis', 'Adiaeresis', 'Udiaeresis', 'ssharp']
 
 class AutocompleteEntry(Tk.Entry):
@@ -86,8 +87,7 @@ if __name__ == '__main__':
         print(u"Try also the backspace key and the arrow keys.")
         test(test_list)
 
-root = Tk()
-uitlezen_xml_met_api.Stations_Lijst_Maken()
+
 entry = AutocompleteEntry(root)
 
 entry.set_completion_list(uitlezen_xml_met_api.lijst_met_stations)

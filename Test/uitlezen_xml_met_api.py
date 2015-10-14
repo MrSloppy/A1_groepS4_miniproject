@@ -22,7 +22,7 @@ def Stations_Lijst_Maken():
     schrijf_xml(antwoord_API)                           # dit roept de functie schrijf_xml met de parameter antwoord_API aan
     stations_dict = xmltodict.parse(antwoord_API.text)
     global lijst_met_stations                           # dit maakt de lijst_met_stations globaal zodat hij later nog kan worden aangeroepen
-    lijst_met_stations = set([])                        # Dit is de lege set die zo gevuld gaat worden
+    lijst_met_stations = set([])                            # Dit is de lege set die zo gevuld gaat worden
     for i in stations_dict["Stations"]["Station"]:      # Dit is de loop die door alle verzamelde informatie gaat onder de dictionaries ["Stations"]["Station"]
 
         lijst_met_stations.add(i["Namen"]["Kort"])      # Dit voegt het station toe aan de tuple
