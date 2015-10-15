@@ -295,7 +295,11 @@ def venster5(event):
     print(var.get())
     master = Tk()
     AnderStation.pack()
-
+    spoor_list = []
+    eindbestemming_list = []
+    vertrektijd_list = []
+    treinsoort_list = []
+    vertrekkende_trein= []
 
     antwoord_API = requests.get("http://webservices.ns.nl/ns-api-avt?station={}".format(var.get()), auth=auth_details)
 
