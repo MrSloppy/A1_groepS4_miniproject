@@ -11,10 +11,16 @@ import xmltodict                #Dit importeert de xmltodict module om xml besta
 # Deze gegevens worden naar de NS api gestuurd als authorisatie bij het request
 auth_details = ("timovanetten@hotmail.com", "_Z-_9y12emNNuHaR2cPrYsCSqJInO2n1R3_RRyD-h3hpIUoeseM37w")
 
+global spoor_list
 spoor_list = []
+global eindbestemming_list
 eindbestemming_list = []
+global vertrektijd_list
 vertrektijd_list = []
+global treinsoort_list
 treinsoort_list = []
+global station_keuze_voor_gegevens
+
 bestemming_input = "Test"
 
 
@@ -216,7 +222,6 @@ def venster4(event):
     Button7.place(x=1000, y=1000)
     Optie_menu.pack()
     Optie_menu.place(x = 350, y = 300)
-    global station_keuze_voor_gegevens
 
     print(var.get())
 
@@ -288,10 +293,11 @@ def venster4(event):
 def venster5(event):
 
 
-    print(station_keuze_voor_gegevens)
+
     master = Tk()
     Button9.place(x=150,y=470)
     AnderStation.pack()
+    print(station_keuze_voor_gegevens)
     master.resizable(width=0, height=0)
     master.geometry("800x600")
     master.config(bg="gold")
@@ -377,7 +383,6 @@ def venster1():
     except:
         pass
 
-    global station_keuze_voor_gegevens
     global label1
     global root
     global Button1
