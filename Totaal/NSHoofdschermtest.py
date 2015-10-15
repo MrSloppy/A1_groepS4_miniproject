@@ -99,8 +99,8 @@ def Antwoord_API_van_Input():
                 print("Het type van deze trein is: ", treinsoort, " en deze vertrekt vanaf spoor", spoor)       # Dit print de rest van de gevraagde informatie
 
     except:
-        print("Ongeldige invoer, probeer het opnieuw")
-        Antwoord_API_van_Input()
+        pass
+
 
 #d[ogbjsofiuns
 
@@ -292,13 +292,56 @@ def venster4(event):
 
 
 def venster5(event):
-
-
-
+    print(var.get())
     master = Tk()
-    Button9.place(x=150,y=470)
     AnderStation.pack()
-    print(station_keuze_voor_gegevens)
+
+
+    antwoord_API = requests.get("http://webservices.ns.nl/ns-api-avt?station={}".format(var.get()), auth=auth_details)
+
+    # Dit print het gehele antwoord wat je van de API terug krijgt
+    # voor documenten zie functie beschrijving
+    schrijf_xml(antwoord_API)
+
+    # Dit stelt de dictionary stations_dict vast met de inhoud van antwoord_API.text
+    # Iedere XML elemental is nu hierarchisch onderverdeeld in dictonaries
+    global stations_dict
+    stations_dict = xmltodict.parse(antwoord_API.text)
+
+    # Deze loop loopt door de aangemaakte dictioanry stations_dict
+    # en wanneer hij een element "ActueleVertrekTijden" ziet met een element "VertrekkendeTrein" erbij dan:
+
+    for i in stations_dict["ActueleVertrekTijden"]["VertrekkendeTrein"]:
+        # zet hij de informatie in dictionary i
+        vertrekkende_trein=dict(i)
+
+        # Hier worden wat variabele vast gelegd voor gebruiksgemak voor later
+        global eindbestemming
+        eindbestemming = vertrekkende_trein["EindBestemming"]
+        global vertrektijd
+        vertrektijd = vertrekkende_trein["VertrekTijd"][11:16]          # de vertrekkende_trein["VertrekTijd"][11:16] is nodig om alleen het uur en de minuten te printen en niet de rest
+        global treinsoort
+        treinsoort = vertrekkende_trein["TreinSoort"]
+        global spoor
+        spoor = vertrekkende_trein["VertrekSpoor"]["#text"]
+        global afkorting
+
+
+        # Hier worden de dictionaries gevuld om voor later gebruik in de GUI
+
+        eindbestemming_list.append(eindbestemming)
+
+        vertrektijd_list.append(vertrektijd)
+
+        treinsoort_list.append(treinsoort)
+
+        spoor_list.append(spoor)
+        print(vertrektijd_list)
+
+        print("Er vertrekt een trein met eindbestemming", eindbestemming, " om:", vertrektijd)          # Dit print de gevraagde informatie
+        print("Het type van deze trein is: ", treinsoort, " en deze vertrekt vanaf spoor", spoor)       # Dit print de rest van de gevraagde informatie
+
+
     master.resizable(width=0, height=0)
     master.geometry("800x600")
     master.config(bg="gold")
@@ -314,7 +357,7 @@ def venster5(event):
     label_weergave7.place(x = 600, y = 100)
 
 
-    label_huidig_station = Label(master, text = "{}".format(station_keuze_voor_gegevens), bg = "gold")
+    label_huidig_station = Label(master, text = "{}".format(var.get()), bg = "gold")
     label_huidig_station.place(x=100, y=100)
     label_Tijd0 = Label(master, text = "{}".format(vertrektijd_list[0]), bg = "gold")
     label_Tijd0.place(x = 200, y= 150 )
