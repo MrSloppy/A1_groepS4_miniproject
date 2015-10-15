@@ -1,5 +1,6 @@
 __author__ = 'Timo'
 __author__ = 'Plz no pasterino'
+#version:0.0
 
 from tkinter import *
 import requests                 # dit importeert de requests module die nodig is om toegang te krijgen tot de API
