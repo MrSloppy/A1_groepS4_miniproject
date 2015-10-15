@@ -5,208 +5,6 @@
 <ActueleVertrekTijden>
 
 	<VertrekkendeTrein>
-		<RitNummer>3667</RitNummer>
-		<VertrekTijd>2015-10-14T18:47:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Roosendaal</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Oss, s-Hertogenbosch, Tilburg</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>3664</RitNummer>
-		<VertrekTijd>2015-10-14T18:48:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Zwolle</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Arnhem, Zutphen, Deventer</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
-		
-			<ReisTip>Stopt tot Arnhem op tussengelegen stations</ReisTip>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>4469</RitNummer>
-		<VertrekTijd>2015-10-14T18:53:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Deurne</EindBestemming>
-		<TreinSoort>Sprinter</TreinSoort>
-		
-			<RouteTekst>Oss, s-Hertogenbosch, Boxtel</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">4b</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>3168</RitNummer>
-		<VertrekTijd>2015-10-14T18:57:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Schiphol</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Arnhem, Ede-Wageningen, Utrecht C</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">1a</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>7667</RitNummer>
-		<VertrekTijd>2015-10-14T19:03:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Zutphen</EindBestemming>
-		<TreinSoort>Sprinter</TreinSoort>
-		
-			<RouteTekst>Elst, Arnhem</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>32269</RitNummer>
-		<VertrekTijd>2015-10-14T19:08:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Roermond</EindBestemming>
-		<TreinSoort>Stoptrein</TreinSoort>
-		
-			<RouteTekst>Boxmeer, Venlo</RouteTekst>
-		
-		
-			<Vervoerder>Veolia</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">1b</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>3068</RitNummer>
-		<VertrekTijd>2015-10-14T19:12:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Den Helder</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Arnhem, Utrecht C, Amsterdam C.</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">1a</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>3669</RitNummer>
-		<VertrekTijd>2015-10-14T19:17:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Roosendaal</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Oss, s-Hertogenbosch, Tilburg</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>3666</RitNummer>
-		<VertrekTijd>2015-10-14T19:18:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Zwolle</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Arnhem, Zutphen, Deventer</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
-		
-			<ReisTip>Stopt tot Arnhem op tussengelegen stations</ReisTip>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>4471</RitNummer>
-		<VertrekTijd>2015-10-14T19:23:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Eindhoven</EindBestemming>
-		<TreinSoort>Sprinter</TreinSoort>
-		
-			<RouteTekst>Oss, s-Hertogenbosch, Boxtel</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">4b</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
-		<RitNummer>3170</RitNummer>
-		<VertrekTijd>2015-10-14T19:27:00+0200</VertrekTijd>
-		
-		
-		<EindBestemming>Schiphol</EindBestemming>
-		<TreinSoort>Intercity</TreinSoort>
-		
-			<RouteTekst>Arnhem, Ede-Wageningen, Utrecht C</RouteTekst>
-		
-		
-			<Vervoerder>NS</Vervoerder>
-		
-		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
-		
-		
-	</VertrekkendeTrein>
-
-	<VertrekkendeTrein>
 		<RitNummer>7669</RitNummer>
 		<VertrekTijd>2015-10-14T19:33:00+0200</VertrekTijd>
 		
@@ -274,6 +72,200 @@
 			<Vervoerder>NS</Vervoerder>
 		
 		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>3668</RitNummer>
+		<VertrekTijd>2015-10-14T19:48:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Zwolle</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		
+			<RouteTekst>Arnhem, Zutphen, Deventer</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
+		
+			<ReisTip>Stopt tot Arnhem op tussengelegen stations</ReisTip>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>4473</RitNummer>
+		<VertrekTijd>2015-10-14T19:53:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Deurne</EindBestemming>
+		<TreinSoort>Sprinter</TreinSoort>
+		
+			<RouteTekst>Oss, s-Hertogenbosch, Boxtel</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">4b</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>3172</RitNummer>
+		<VertrekTijd>2015-10-14T19:57:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Utrecht Centraal</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		
+			<RouteTekst>Arnhem, Ede-Wageningen, Driebergen-Zeist</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>7671</RitNummer>
+		<VertrekTijd>2015-10-14T20:03:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Zutphen</EindBestemming>
+		<TreinSoort>Sprinter</TreinSoort>
+		
+			<RouteTekst>Elst, Arnhem</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>32273</RitNummer>
+		<VertrekTijd>2015-10-14T20:08:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Roermond</EindBestemming>
+		<TreinSoort>Stoptrein</TreinSoort>
+		
+			<RouteTekst>Boxmeer, Venlo</RouteTekst>
+		
+		
+			<Vervoerder>Veolia</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">1b</VertrekSpoor>
+		
+		
+			<Opmerkingen>
+				
+					
+						<Opmerking>
+							Rijdt niet verder dan  Venlo
+						</Opmerking>
+					
+				
+			</Opmerkingen>
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>3072</RitNummer>
+		<VertrekTijd>2015-10-14T20:12:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Den Helder</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		
+			<RouteTekst>Arnhem, Utrecht C, Amsterdam C.</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">1a</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>3673</RitNummer>
+		<VertrekTijd>2015-10-14T20:17:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Roosendaal</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		
+			<RouteTekst>Oss, s-Hertogenbosch, Tilburg</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>3670</RitNummer>
+		<VertrekTijd>2015-10-14T20:18:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Zwolle</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		
+			<RouteTekst>Arnhem, Zutphen, Deventer</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
+		
+			<ReisTip>Stopt tot Arnhem op tussengelegen stations</ReisTip>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>4475</RitNummer>
+		<VertrekTijd>2015-10-14T20:23:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Eindhoven</EindBestemming>
+		<TreinSoort>Sprinter</TreinSoort>
+		
+			<RouteTekst>Oss, s-Hertogenbosch, Boxtel</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">4b</VertrekSpoor>
+		
+		
+	</VertrekkendeTrein>
+
+	<VertrekkendeTrein>
+		<RitNummer>3174</RitNummer>
+		<VertrekTijd>2015-10-14T20:27:00+0200</VertrekTijd>
+		
+		
+		<EindBestemming>Utrecht Centraal</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		
+			<RouteTekst>Arnhem, Ede-Wageningen, Driebergen-Zeist</RouteTekst>
+		
+		
+			<Vervoerder>NS</Vervoerder>
+		
+		<VertrekSpoor wijziging="false">3b</VertrekSpoor>
 		
 		
 	</VertrekkendeTrein>
