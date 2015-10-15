@@ -191,9 +191,13 @@ def venster3(event):
     label_Typetrein3.place(x= 320, y = 500)
 
 def venster4(event):
+    variable  = StringVar(root)
+    variable.set("One")
+    Opie_menu = OptionMenu(root, variable, "One", "Two", "Three")
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
     Button9.place(x=150,y=470)
+    Opie_menu.pack()
     AnderStation.pack()
 
 def venster5(event):
@@ -234,7 +238,7 @@ def venster1():
     global AnderStation
     global Button9
     global gegevens
-
+    global Button_A
     root = Tk()
     root.resizable(width=0, height=0)
     root.geometry("800x600")
@@ -283,6 +287,7 @@ def venster1():
     Button7.bind('<Button-1>', venster4)
     Button7.pack()
     Button7.place(x=1000,y=1000)
+
 
     photo1 = PhotoImage(file="Welkomsttekst.png") # je geeft een PhotoImage file een variabele
     photo5 = PhotoImage(file="Bar.png")
