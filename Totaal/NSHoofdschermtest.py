@@ -210,8 +210,8 @@ def venster4(event):
     Optie_menu = OptionMenu(root, var, *lijst_met_stations)
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
-
     Optie_menu.pack()
+    Optie_menu.place(x = 350, y = 300)
     global station_keuze_voor_gevens
     global Optie_menu
     print(var.get())
