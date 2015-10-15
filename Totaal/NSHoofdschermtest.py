@@ -362,7 +362,7 @@ def venster5(event):
 
 
     label_huidig_station = Label(master, text = "{}".format(var.get()), bg = "gold")
-    label_huidig_station.place(x=100, y=100)
+    label_huidig_station.place(x= 60, y =100)
     label_Tijd0 = Label(master, text = "{}".format(vertrektijd_list[0]), bg = "gold")
     label_Tijd0.place(x = 200, y= 150 )
     label_Eindbestemming0 = Label(master, text = "{}".format(eindbestemming_list[0]), bg = "gold")
