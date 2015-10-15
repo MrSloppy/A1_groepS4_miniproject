@@ -31,11 +31,11 @@ def Stations_Lijst_Maken():
     global lijst_met_stationcodes
     lijst_met_stationcodes = []
     for i in stations_dict["Stations"]["Station"]:      # Dit is de loop die door alle verzamelde informatie gaat onder de dictionaries ["Stations"]["Station"]
+        if (i["Land"]) == "NL":
+            lijst_met_stations.append(i["Namen"]["Lang"])      # Dit voegt het station toe aan de tuple
 
+            lijst_met_stationcodes.append(i["Code"])                # Dit is de afkorting van  het station
 
-        lijst_met_stations.append(i["Namen"]["Lang"])      # Dit voegt het station toe aan de tuple
-
-        lijst_met_stationcodes.append(i["Code"])                # Dit is de afkorting van  het station
 
 
 
