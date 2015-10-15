@@ -192,26 +192,133 @@ def venster3(event):
     label_Typetrein3.place(x= 320, y = 500)
 
 def venster4(event):
-    var  = StringVar(root)
+    var = StringVar(root)
     var.set("Selecteer het Station")
-    Opie_menu = OptionMenu(root, var, *lijst_met_stations, command=var.get())
+    Optie_menu = OptionMenu(root, var, *lijst_met_stations)
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
-    Button9.place(x=150,y=470)
-    Opie_menu.pack()
+
+    Optie_menu.pack()
+    global station_keuze_voor_gevens
+    global Optie_menu
     print(var.get())
+    station_keuze_voor_gevens = str(var.get())
     AnderStation.pack()
-    station_keuze_voor_gevens = var.get()
+    def ok():
+        print("value is", var.get())
+        code_van_station = lijst_met_stations.index(bestemming_input)
+        station_code = lijst_met_stationcodes[code_van_station]
+        antwoord_API = requests.get("http://webservices.ns.nl/ns-api-avt?station={}".format(station_code), auth=auth_details)
+
+        # Dit print het gehele antwoord wat je van de API terug krijgt
+        print(antwoord_API.text)
+
+        # voor documenten zie functie beschrijving
+        schrijf_xml(antwoord_API)
+
+        # Dit stelt de dictionary stations_dict vast met de inhoud van antwoord_API.text
+        # Iedere XML elemental is nu hierarchisch onderverdeeld in dictonaries
+        global stations_dict
+        stations_dict = xmltodict.parse(antwoord_API.text)
+
+        # Deze loop loopt door de aangemaakte dictioanry stations_dict
+        # en wanneer hij een element "ActueleVertrekTijden" ziet met een element "VertrekkendeTrein" erbij dan:
+
+        for i in stations_dict["ActueleVertrekTijden"]["VertrekkendeTrein"]:
+            # zet hij de informatie in dictionary i
+            vertrekkende_trein=dict(i)
+
+            # Hier worden wat variabele vast gelegd voor gebruiksgemak voor later
+            global eindbestemming
+            eindbestemming = vertrekkende_trein["EindBestemming"]
+            global vertrektijd
+            vertrektijd = vertrekkende_trein["VertrekTijd"][11:16]          # de vertrekkende_trein["VertrekTijd"][11:16] is nodig om alleen het uur en de minuten te printen en niet de rest
+            global treinsoort
+            treinsoort = vertrekkende_trein["TreinSoort"]
+            global spoor
+            spoor = vertrekkende_trein["VertrekSpoor"]["#text"]
+            global afkorting
+
+
+            # Hier worden de dictionaries gevuld om voor later gebruik in de GUI
+            global eindbestemming_list
+            eindbestemming_list.append(eindbestemming)
+            global vertrektijd_list
+            vertrektijd_list.append(vertrektijd)
+            global treinsoort_list
+            treinsoort_list.append(treinsoort)
+            global spoor_list
+            spoor_list.append(spoor)
+
+            print("Er vertrekt een trein met eindbestemming", eindbestemming, " om:", vertrektijd)          # Dit print de gevraagde informatie
+            print("Het type van deze trein is: ", treinsoort, " en deze vertrekt vanaf spoor", spoor)       # Dit print de rest van de gevraagde informatie
+    global Button9
+    Button9 = Button(root, wraplength=125, justify=LEFT, text="Bevestig",bg = "#00246B", fg = "white",font = Buttonfont, width=10, command=ok)
+    Button9.bind('<Button-1>', venster5)
+    Button9.pack()
+    Button9.place(x=170,y=450)
 
 
 def venster5(event):
-    Button9.place(x=1000,y=1000)
-    print(station_keuze_voor_gevens)
-    AnderStation.pack_forget()
+    try:
+        Optie_menu.forget()
+    except:
+        pass
+    Antwoord_API_van_Input()
 
+    print(station_keuze_voor_gevens)
+    master = Tk()
+    Button9.place(x=150,y=470)
+    AnderStation.pack()
+    master.resizable(width=0, height=0)
+    master.geometry("800x600")
+    master.config(bg="gold")
+
+    label_huidig_station = Label(master, text = "{}".format(station_keuze_voor_gevens))
+    label_huidig_station.place(x=100, y=100)
+    label_Tijd0 = Label(master, text = "{}".format(vertrektijd_list[0]))
+    label_Tijd0.place(x = 200, y= 150 )
+    label_Eindbestemming0 = Label(master, text = "{}".format(eindbestemming_list[0]))
+    label_Eindbestemming0.place(x = 300, y = 150)
+    label_Spoor0 = Label(master, text = "{}".format(spoor_list[0]))
+    label_Spoor0.place(x = 550, y = 150)
+    label_Typetrein0 = Label(master, text = "{}".format(treinsoort_list[0]))
+    label_Typetrein0.place(x= 320, y = 200)
+
+    label_Tijd1 = Label(master, text = "{}".format(vertrektijd_list[1]))
+    label_Tijd1.place(x = 200, y= 250 )
+    label_Eindbestemming1 = Label(master, text = "{}".format(eindbestemming_list[1]))
+    label_Eindbestemming1.place(x = 300, y = 250)
+    label_Spoor1 = Label(master, text = "{}".format(spoor_list[1]))
+    label_Spoor1.place(x = 550, y = 250)
+    label_Typetrein1 = Label(master, text = "{}".format(treinsoort_list[1]))
+    label_Typetrein1.place(x= 320, y = 300)
+
+    label_Tijd2 = Label(master, text = "{}".format(vertrektijd_list[2]))
+    label_Tijd2.place(x = 200, y= 350 )
+    label_Eindbestemming2 = Label(master, text = "{}".format(eindbestemming_list[2]))
+    label_Eindbestemming2.place(x = 300, y = 350)
+    label_Spoor2 = Label(master, text = "{}".format(spoor_list[2]))
+    label_Spoor2.place(x = 550, y = 350)
+    label_Typetrein2 = Label(master, text = "{}".format(treinsoort_list[2]))
+    label_Typetrein2.place(x= 320, y = 400)
+
+    label_Tijd3 = Label(master, text = "{}".format(vertrektijd_list[3]))
+    label_Tijd3.place(x = 200, y= 450 )
+    label_Eindbestemming3 = Label(master, text = "{}".format(eindbestemming_list[3]))
+    label_Eindbestemming3.place(x = 300, y = 450)
+    label_Spoor3 = Label(master, text = "{}".format(spoor_list[3]))
+    label_Spoor3.place(x = 550, y = 450)
+    label_Typetrein3 = Label(master, text = "{}".format(treinsoort_list[3]))
+    label_Typetrein3.place(x= 320, y = 500)
 
 
 def reset(event):
+    try:
+        Optie_menu.forget()
+        Button9.forget()
+    except:
+        pass
     label1.pack()
     label3.pack()
     Button1.place(x=0,y=425)
@@ -228,6 +335,11 @@ def reset(event):
     AnderStation.pack_forget()
 
 def venster1():
+    try:
+        Optie_menu.forget()
+    except:
+        pass
+
     global station_keuze_voor_gevens
     global label1
     global root
@@ -311,10 +423,7 @@ def venster1():
     Button8.pack()
     Button8.place(x=1000,y=1000)
 
-    Button9 = Button(root, wraplength=125, justify=LEFT, text="Gegevens",bg = "#00246B", fg = "white",font = Buttonfont, width=10)
-    Button9.bind('<Button-1>', venster5)
-    Button9.pack()
-    Button9.place(x=1000,y=1000)
+
 
 
     root.mainloop()
