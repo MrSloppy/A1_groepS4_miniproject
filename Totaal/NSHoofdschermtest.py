@@ -207,27 +207,37 @@ def venster3(event):
     label_Typetrein3.place(x= 430, y = 450)
 
 def venster4(event):
+    global var
     var = StringVar(root)
-    var.set("Uw Station")
+    global Optie_menu
     Optie_menu = OptionMenu(root, var, *lijst_met_stations)
+    var.set("Uw Station")
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
     Optie_menu.pack()
     Optie_menu.place(x = 350, y = 300)
-    global station_keuze_voor_gevens
-    global Optie_menu
+    global station_keuze_voor_gegevens
+
     print(var.get())
-    station_keuze_voor_gevens = str(var.get())
+
     AnderStation.pack()
     def ok():
-        print("value is", var.get())
-        code_van_station = lijst_met_stations.index(bestemming_input)
+        spoor_list = []
+        eindbestemming_list = []
+        vertrektijd_list = []
+        treinsoort_list = []
+        vertrekkende_trein= []
+        print(var.get())
+
+        station_keuze_voor_gegevens = var.get()
+
+        code_van_station = lijst_met_stations.index(var.get())
         station_code = lijst_met_stationcodes[code_van_station]
-        antwoord_API = requests.get("http://webservices.ns.nl/ns-api-avt?station={}".format(station_code), auth=auth_details)
+        print(station_code)
+        print("value is", var.get())
+        antwoord_API = requests.get("http://webservices.ns.nl/ns-api-avt?station={}".format(var.get()), auth=auth_details)
 
         # Dit print het gehele antwoord wat je van de API terug krijgt
-        print(antwoord_API.text)
-
         # voor documenten zie functie beschrijving
         schrijf_xml(antwoord_API)
 
@@ -256,14 +266,15 @@ def venster4(event):
 
 
             # Hier worden de dictionaries gevuld om voor later gebruik in de GUI
-            global eindbestemming_list
+
             eindbestemming_list.append(eindbestemming)
-            global vertrektijd_list
+
             vertrektijd_list.append(vertrektijd)
-            global treinsoort_list
+
             treinsoort_list.append(treinsoort)
-            global spoor_list
+
             spoor_list.append(spoor)
+            print(vertrektijd_list)
 
             print("Er vertrekt een trein met eindbestemming", eindbestemming, " om:", vertrektijd)          # Dit print de gevraagde informatie
             print("Het type van deze trein is: ", treinsoort, " en deze vertrekt vanaf spoor", spoor)       # Dit print de rest van de gevraagde informatie
@@ -275,9 +286,9 @@ def venster4(event):
 
 
 def venster5(event):
-    Antwoord_API_van_Input()
 
-    print(station_keuze_voor_gevens)
+
+    print(station_keuze_voor_gegevens)
     master = Tk()
     Button9.place(x=150,y=470)
     AnderStation.pack()
@@ -296,7 +307,7 @@ def venster5(event):
     label_weergave7.place(x = 600, y = 100)
 
 
-    label_huidig_station = Label(master, text = "{}".format(station_keuze_voor_gevens), bg = "gold")
+    label_huidig_station = Label(master, text = "{}".format(station_keuze_voor_gegevens), bg = "gold")
     label_huidig_station.place(x=100, y=100)
     label_Tijd0 = Label(master, text = "{}".format(vertrektijd_list[0]), bg = "gold")
     label_Tijd0.place(x = 200, y= 150 )
@@ -366,7 +377,7 @@ def venster1():
     except:
         pass
 
-    global station_keuze_voor_gevens
+    global station_keuze_voor_gegevens
     global label1
     global root
     global Button1
