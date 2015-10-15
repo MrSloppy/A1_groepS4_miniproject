@@ -96,7 +96,7 @@ def Antwoord_API_van_Input():
         print("Ongeldige invoer, probeer het opnieuw")
         Antwoord_API_van_Input()
 
-
+#d[ogbjsofiuns
 
 # Nu we het antwoord van de API hebben gaan we dit opslaaan in een XML-bestand
 #Hiervoor maken we de volgende functie aan
