@@ -15,6 +15,8 @@ spoor_list = []
 eindbestemming_list = []
 vertrektijd_list = []
 treinsoort_list = []
+bestemming_input = "Test"
+
 
 # Deze fuctie is geschreven om een lijst met alle stations en schrijftypes in te vullen in een tuple
 def Stations_Lijst_Maken():
@@ -41,7 +43,7 @@ def Stations_Lijst_Maken():
 
 def Antwoord_API_van_Input():
     global bestemming_input
-    bestemming_input = input("Op welk Station bevind u zich?")
+    bestemming_input = "Utrecht Centraal"
     # Dit is de request die je stuurt naar de API en het wordt opgeslagen in de variabele genaamd antwoord_API
     code_van_station = lijst_met_stations.index(bestemming_input)
     station_code = lijst_met_stationcodes[code_van_station]
@@ -115,8 +117,6 @@ Stations_Lijst_Maken()                          # dit roept de functie aan om de
 print(lijst_met_stations)                       # dit print de lijst_met_stations om te checken of het aanmaken goed gegaan is
 print(len(lijst_met_stations))                  # dit print de lengte van de lijst_met_stations
 
-Antwoord_API_van_Input()                        # Dit voert de functie Antwoord_API_van_Input()
-
 print(spoor_list)
 print(treinsoort_list)
 print(lijst_met_stationcodes)
@@ -144,10 +144,14 @@ def venster2(event):
     Button8.place(x=650,y=470)
 
 def venster3(event):
+
+    Antwoord_API_van_Input()
+
     master = Tk()
     master.resizable(width=0, height=0)
     master.geometry("800x600")
     master.config(bg="gold")
+
 
     label_huidig_station = Label(master, text = "{}".format(bestemming_input))
     label_huidig_station.place(x=100, y=100)
@@ -214,6 +218,7 @@ def reset(event):
     AnderStation.pack_forget()
 
 def venster1():
+
     global label1
     global root
     global Button1
