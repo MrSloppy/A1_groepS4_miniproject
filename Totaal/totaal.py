@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import Tk, StringVar
 #from tkinter.ttk import *
 from tkinter import ttk
 
@@ -65,6 +66,8 @@ def venster3(event):
     label_Typetrein3.place(x= 320, y = 500)
 
 def venster4(event):
+
+
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
     Button9.place(x=150,y=470)

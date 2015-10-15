@@ -4,8 +4,8 @@ root = Tk() #tkinter scherm aanmaken
 
 
 
-    TITLE_FONT = ("helvetica", 40, "bold") #
-    Buttonfont=("helvetica", 16)
+TITLE_FONT = ("helvetica", 40, "bold") #
+Buttonfont=("helvetica", 16)
 
 
 #een foto toevoegen aan dit bestand
