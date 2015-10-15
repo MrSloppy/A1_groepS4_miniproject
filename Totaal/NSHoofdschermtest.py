@@ -283,6 +283,7 @@ def venster4(event):
 
             print("Er vertrekt een trein met eindbestemming", eindbestemming, " om:", vertrektijd)          # Dit print de gevraagde informatie
             print("Het type van deze trein is: ", treinsoort, " en deze vertrekt vanaf spoor", spoor)       # Dit print de rest van de gevraagde informatie
+
     global Button9
     Button9 = Button(root, wraplength=125, justify=LEFT, text="Bevestig",bg = "#00246B", fg = "white",font = Buttonfont, width=10, command=ok)
     Button9.bind('<Button-1>', venster5)
