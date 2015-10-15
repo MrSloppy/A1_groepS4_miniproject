@@ -155,6 +155,7 @@ def venster3(event):
 
     label_huidig_station = Label(master, text = "{}".format(bestemming_input))
     label_huidig_station.place(x=100, y=100)
+    label_Tijdweergave
     label_Tijd0 = Label(master, text = "{}".format(vertrektijd_list[0]))
     label_Tijd0.place(x = 200, y= 150 )
     label_Eindbestemming0 = Label(master, text = "{}".format(eindbestemming_list[0]))
