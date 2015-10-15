@@ -192,18 +192,24 @@ def venster3(event):
     label_Typetrein3.place(x= 320, y = 500)
 
 def venster4(event):
-    variable  = StringVar(root)
-    variable.set("One")
-    Opie_menu = OptionMenu(root, variable, *lijst_met_stations, command=variable.get())
+    var  = StringVar(root)
+    var.set("Selecteer het Station")
+    Opie_menu = OptionMenu(root, var, *lijst_met_stations, command=var.get())
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
     Button9.place(x=150,y=470)
     Opie_menu.pack()
+    print(var.get())
     AnderStation.pack()
+    station_keuze_voor_gevens = var.get()
+
 
 def venster5(event):
     Button9.place(x=1000,y=1000)
+    print(station_keuze_voor_gevens)
     AnderStation.pack_forget()
+
+
 
 def reset(event):
     label1.pack()
@@ -222,7 +228,7 @@ def reset(event):
     AnderStation.pack_forget()
 
 def venster1():
-
+    global station_keuze_voor_gevens
     global label1
     global root
     global Button1
