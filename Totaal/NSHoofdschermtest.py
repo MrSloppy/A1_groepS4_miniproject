@@ -144,13 +144,15 @@ def venster2(event):
     Button8.place(x=650,y=470)
 
 def venster3(event):
-
     Antwoord_API_van_Input()
 
     master = Tk()
     master.resizable(width=0, height=0)
     master.geometry("800x600")
     master.config(bg="gold")
+
+    Gfont=("helvetica", 40, "bold")
+    Buttonfont=("helvetica", 16)
 
     label_weergave1 = Label(master, text = "Tijd", bg="gold")
     label_weergave1.place(x=200, y=100)
@@ -349,6 +351,10 @@ def reset(event):
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000,y=1000)
     Button9.place(x=1000,y=1000)
+    try:
+        Optie_menu.place(x=1000, y=1000)
+    except:
+        pass
     label2.pack(side=BOTTOM)
     Button8.place(x=1000,y=1000)
     HuidigStation.pack_forget()
