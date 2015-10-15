@@ -206,7 +206,7 @@ def venster3(event):
 
 def venster4(event):
     var = StringVar(root)
-    var.set("Selecteer het Station")
+    var.set("Uw Station")
     Optie_menu = OptionMenu(root, var, *lijst_met_stations)
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
@@ -273,10 +273,6 @@ def venster4(event):
 
 
 def venster5(event):
-    try:
-        Optie_menu.forget()
-    except:
-        pass
     Antwoord_API_van_Input()
 
     print(station_keuze_voor_gevens)
@@ -289,7 +285,7 @@ def venster5(event):
 
 
     label_weergave4 = Label(master, text = "Tijd:", bg ="gold")
-    label_weergave4.place(x = 175, y = 150)
+    label_weergave4.place(x = 200, y = 100)
     label_weergave5 = Label(master, text = "Station", bg = "gold")
     label_weergave5.place(x = 250, y = 100)
     label_weergave6 = Label(master, text = "Type trein", bg = "gold")
@@ -299,43 +295,42 @@ def venster5(event):
 
 
     label_huidig_station = Label(master, text = "{}".format(station_keuze_voor_gevens), bg = "gold")
-    label_huidig_station.place(x=80, y=80)
-
+    label_huidig_station.place(x=100, y=100)
     label_Tijd0 = Label(master, text = "{}".format(vertrektijd_list[0]), bg = "gold")
-    label_Tijd0.place(x = 180, y= 200 )
+    label_Tijd0.place(x = 200, y= 150 )
     label_Eindbestemming0 = Label(master, text = "{}".format(eindbestemming_list[0]), bg = "gold")
-    label_Eindbestemming0.place(x = 300, y = 450)
+    label_Eindbestemming0.place(x = 250, y = 150)
     label_Spoor0 = Label(master, text = "{}".format(spoor_list[0]), bg = "gold")
-    label_Spoor0.place(x = 550, y = 450)
+    label_Spoor0.place(x = 600, y = 150)
     label_Typetrein0 = Label(master, text = "{}".format(treinsoort_list[0]), bg = "gold")
-    label_Typetrein0.place(x= 350, y = 450)
+    label_Typetrein0.place(x= 430, y = 150)
 
     label_Tijd1 = Label(master, text = "{}".format(vertrektijd_list[1]), bg = "gold")
-    label_Tijd1.place(x = 180, y= 250 )
+    label_Tijd1.place(x = 200, y= 250 )
     label_Eindbestemming1 = Label(master, text = "{}".format(eindbestemming_list[1]), bg = "gold")
-    label_Eindbestemming1.place(x = 300, y = 450)
+    label_Eindbestemming1.place(x = 250, y = 250)
     label_Spoor1 = Label(master, text = "{}".format(spoor_list[1]), bg = "gold")
-    label_Spoor1.place(x = 550, y = 450)
+    label_Spoor1.place(x = 600, y = 250)
     label_Typetrein1 = Label(master, text = "{}".format(treinsoort_list[1]), bg = "gold")
-    label_Typetrein1.place(x= 350, y = 450)
+    label_Typetrein1.place(x= 430, y = 250)
 
     label_Tijd2 = Label(master, text = "{}".format(vertrektijd_list[2]), bg = "gold")
-    label_Tijd2.place(x = 180, y= 350 )
+    label_Tijd2.place(x = 200, y= 350 )
     label_Eindbestemming2 = Label(master, text = "{}".format(eindbestemming_list[2]), bg = "gold")
-    label_Eindbestemming2.place(x = 300, y = 450)
+    label_Eindbestemming2.place(x = 250, y = 350)
     label_Spoor2 = Label(master, text = "{}".format(spoor_list[2]), bg = "gold")
-    label_Spoor2.place(x = 550, y = 450)
+    label_Spoor2.place(x = 600, y = 350)
     label_Typetrein2 = Label(master, text = "{}".format(treinsoort_list[2]), bg = "gold")
-    label_Typetrein2.place(x= 350, y = 450)
+    label_Typetrein2.place(x= 430, y = 350)
 
     label_Tijd3 = Label(master, text = "{}".format(vertrektijd_list[3]), bg = "gold")
-    label_Tijd3.place(x = 180, y= 450 )
+    label_Tijd3.place(x = 200, y= 450 )
     label_Eindbestemming3 = Label(master, text = "{}".format(eindbestemming_list[3]), bg = "gold")
-    label_Eindbestemming3.place(x = 300, y = 450)
+    label_Eindbestemming3.place(x = 250, y = 450)
     label_Spoor3 = Label(master, text = "{}".format(spoor_list[3]), bg = "gold")
-    label_Spoor3.place(x = 550, y = 450)
+    label_Spoor3.place(x = 600, y = 450)
     label_Typetrein3 = Label(master, text = "{}".format(treinsoort_list[3]), bg = "gold")
-    label_Typetrein3.place(x= 350, y = 450)
+    label_Typetrein3.place(x= 430, y = 450)
 
 
 def reset(event):
