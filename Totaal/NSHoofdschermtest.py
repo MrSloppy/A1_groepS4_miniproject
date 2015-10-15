@@ -155,7 +155,6 @@ def venster3(event):
 
     label_huidig_station = Label(master, text = "{}".format(bestemming_input))
     label_huidig_station.place(x=100, y=100)
-    label_Tijdweergave
     label_Tijd0 = Label(master, text = "{}".format(vertrektijd_list[0]))
     label_Tijd0.place(x = 200, y= 150 )
     label_Eindbestemming0 = Label(master, text = "{}".format(eindbestemming_list[0]))
@@ -277,32 +276,34 @@ def venster5(event):
 
     label_huidig_station = Label(master, text = "{}".format(station_keuze_voor_gevens))
     label_huidig_station.place(x=100, y=100)
+    label_Tijdweergave0 = Label(master, text = "Tijd:")
+    label_Tijdweergave0.place(x = 120, y = 120)
     label_Tijd0 = Label(master, text = "{}".format(vertrektijd_list[0]))
     label_Tijd0.place(x = 200, y= 150 )
     label_Eindbestemming0 = Label(master, text = "{}".format(eindbestemming_list[0]))
-    label_Eindbestemming0.place(x = 300, y = 150)
+    label_Eindbestemming0.place(x = 300, y = 450)
     label_Spoor0 = Label(master, text = "{}".format(spoor_list[0]))
     label_Spoor0.place(x = 550, y = 150)
     label_Typetrein0 = Label(master, text = "{}".format(treinsoort_list[0]))
-    label_Typetrein0.place(x= 320, y = 200)
+    label_Typetrein0.place(x= 350, y = 200)
 
     label_Tijd1 = Label(master, text = "{}".format(vertrektijd_list[1]))
     label_Tijd1.place(x = 200, y= 250 )
     label_Eindbestemming1 = Label(master, text = "{}".format(eindbestemming_list[1]))
-    label_Eindbestemming1.place(x = 300, y = 250)
+    label_Eindbestemming1.place(x = 300, y = 450)
     label_Spoor1 = Label(master, text = "{}".format(spoor_list[1]))
     label_Spoor1.place(x = 550, y = 250)
     label_Typetrein1 = Label(master, text = "{}".format(treinsoort_list[1]))
-    label_Typetrein1.place(x= 320, y = 300)
+    label_Typetrein1.place(x= 350, y = 300)
 
     label_Tijd2 = Label(master, text = "{}".format(vertrektijd_list[2]))
     label_Tijd2.place(x = 200, y= 350 )
     label_Eindbestemming2 = Label(master, text = "{}".format(eindbestemming_list[2]))
-    label_Eindbestemming2.place(x = 300, y = 350)
+    label_Eindbestemming2.place(x = 300, y = 450)
     label_Spoor2 = Label(master, text = "{}".format(spoor_list[2]))
     label_Spoor2.place(x = 550, y = 350)
     label_Typetrein2 = Label(master, text = "{}".format(treinsoort_list[2]))
-    label_Typetrein2.place(x= 320, y = 400)
+    label_Typetrein2.place(x= 350, y = 400)
 
     label_Tijd3 = Label(master, text = "{}".format(vertrektijd_list[3]))
     label_Tijd3.place(x = 200, y= 450 )
@@ -311,7 +312,7 @@ def venster5(event):
     label_Spoor3 = Label(master, text = "{}".format(spoor_list[3]))
     label_Spoor3.place(x = 550, y = 450)
     label_Typetrein3 = Label(master, text = "{}".format(treinsoort_list[3]))
-    label_Typetrein3.place(x= 320, y = 500)
+    label_Typetrein3.place(x= 350, y = 450)
 
 
 def reset(event):
