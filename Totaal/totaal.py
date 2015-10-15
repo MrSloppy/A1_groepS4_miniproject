@@ -67,7 +67,6 @@ def venster3(event):
 
 def venster4(event):
 
-
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
     Button9.place(x=150,y=470)
