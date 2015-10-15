@@ -194,7 +194,7 @@ def venster3(event):
 def venster4(event):
     variable  = StringVar(root)
     variable.set("One")
-    Opie_menu = OptionMenu(root, variable, "One", "Two", "Three")
+    Opie_menu = OptionMenu(root, variable, *lijst_met_stations, command=variable.get())
     Button6.place(x=1000,y=1000)
     Button7.place(x=1000, y=1000)
     Button9.place(x=150,y=470)
