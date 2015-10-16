@@ -135,7 +135,7 @@ from tkinter import ttk
 
 Gfont=("helvetica", 40, "bold")
 Buttonfont=("helvetica", 16)
-
+#hier kies je welke informatie je wilt ophalen: het huidige station en wat daarvanuit vertrekt en een ander station met daarin alle stations in Nederland
 def venster2(event):
     Button1.place(x=1000,y=1000)
     Button2.place(x=1000,y=1000)
@@ -148,7 +148,7 @@ def venster2(event):
     Button6.place(x=200, y=300)
     Button7.place(x=400, y=300)
     Button8.place(x=650,y=470)
-
+#in dit venster komen de gegevens voor het huidige station terecht(altijd Utrecht Centraal)
 def venster3(event):
     Antwoord_API_van_Input()
 
@@ -211,7 +211,7 @@ def venster3(event):
     label_Spoor3.place(x = 600, y = 450)
     label_Typetrein3 = Label(master, bg="gold", text = "{}".format(treinsoort_list[3]))
     label_Typetrein3.place(x= 430, y = 450)
-
+#dit is het scherm waarin de gebruiker zijn beginstation kan kiezen vanuit Utrecht Centraal. Alle Nederlandse treinsporen staan hierin vanuit de API gefilterd.
 def venster4(event):
     global var
     var = StringVar(root)
@@ -290,7 +290,7 @@ def venster4(event):
     Button9.pack()
     Button9.place(x=170,y=450)
 
-
+#in dit venster komen de gegevens voor het eigen keuze van beginstation.
 def venster5(event):
     print(var.get())
     master = Tk()
@@ -341,7 +341,7 @@ def venster5(event):
 
         spoor_list.append(spoor)
         print(vertrektijd_list)
-
+        #deze gegevens komen in de console te staan voor alle tijden en treinen die vanuit een beginstation vertrekken
         print("Er vertrekt een trein met eindbestemming", eindbestemming, " om:", vertrektijd)          # Dit print de gevraagde informatie
         print("Het type van deze trein is: ", treinsoort, " en deze vertrekt vanaf spoor", spoor)       # Dit print de rest van de gevraagde informatie
 
@@ -350,7 +350,7 @@ def venster5(event):
     master.geometry("800x600")
     master.config(bg="gold")
 
-
+#labels 4 t/m 7 zijn statische labels die standaard boven de vertrektijden, stations, spoor en treinsoort staan
     label_weergave4 = Label(master, text = "Tijd:", bg ="gold")
     label_weergave4.place(x = 200, y = 100)
     label_weergave5 = Label(master, text = "Station", bg = "gold")
@@ -360,8 +360,8 @@ def venster5(event):
     label_weergave7 = Label(master, text = "Spoor",bg = "gold")
     label_weergave7.place(x = 600, y = 100)
 
-
-    label_huidig_station = Label(master, text = "{}".format(var.get()), bg = "gold")
+#deze labels komen onder de statische labels. ze weergeven hetgeen wat uit de API komt in de console voor het huidige station en het zelf uitgekozen station.
+    label_huidig_station = Label(master, text = "{}".format(var.get()), fg = "white", bg = "blue")
     label_huidig_station.place(x= 50, y =70)
     label_Tijd0 = Label(master, text = "{}".format(vertrektijd_list[0]), bg = "gold")
     label_Tijd0.place(x = 200, y= 150 )
@@ -399,7 +399,7 @@ def venster5(event):
     label_Typetrein3 = Label(master, text = "{}".format(treinsoort_list[3]), bg = "gold")
     label_Typetrein3.place(x= 430, y = 450)
 
-
+#deze functie zorgt ervoor dat als je klikt op 'terug naar hoofdscherm' alle knoppen van het huidige scherm vergeten worden
 def reset(event):
     try:
         Optie_menu.forget()
@@ -430,7 +430,7 @@ def venster1():
         Optie_menu.forget()
     except:
         pass
-
+#al deze knoppenm labels en definities zijn ergens anders in de code weer herroepbaar
     global label1
     global root
     global Button1
@@ -449,7 +449,7 @@ def venster1():
     global gegevens
     global Button_A
     root = Tk()
-    root.resizable(width=0, height=0)
+    root.resizable(width=0, height=0)#zorgt ervoor dat de lengte en breedte niet uitvergrootbaar zijn
     root.geometry("800x600")
     root.config(bg="gold")
 
@@ -464,7 +464,7 @@ def venster1():
 
     gegevens = Label(root, height=3, bg="gold", fg="darkblue", text="gegevens", font=Gfont)
     gegevens.pack_forget()
-
+#Buttons 1 t/m 4 zijn cosmetische knopjes voor het hoofdscherm
     Button1 = Button(root, wraplength=129, width = 12, text="Ik wil naar Amsterdam", bg = "#00246B", fg ="white", font = Buttonfont)
     Button1.pack()
     Button1.place(x=0, y=425)
@@ -483,13 +483,13 @@ def venster1():
 
     Button5 = Button(root, wraplength=129,width = 12, text="Reis informatie", bg = "#00246B", fg ="white", font = Buttonfont)
     Button5.bind('<Button-1>', venster2)
-    Button5.pack()
+    Button5.pack()#dit leidt naar venster2 voor de keuze of je naar het huidige station wilt of een ander station wilt zien
     Button5.place(x=650, y=425)
     #Dropdownmenu
 
     Button6 = Button(root, wraplength=125, justify=LEFT, text="Info huidig station",bg = "#00246B", fg = "white",font = Buttonfont, width=10)
     Button6.bind('<Button-1>', venster3)
-    Button6.pack()
+    Button6.pack()#dit leidt naar venster 3 voor de gegevens van het huidige station(dat is altijd Utrecht Centraal)
     Button6.place(x=1000,y=1000)
 
     Button7 = Button(root, wraplength=125, justify=LEFT, text="Info ander station",bg = "#00246B", fg = "white",font = Buttonfont, width=10)
@@ -510,7 +510,7 @@ def venster1():
 
     Button8 = Button(root, wraplength=125, justify=LEFT, text="Terug naar startscherm",bg = "#00246B", fg = "white",font = Buttonfont, width=10)
     Button8.bind('<Button-1>', reset)
-    Button8.pack()
+    Button8.pack()#brengt je terug naar het startscherm om weer een huidige en andere station in te voeren
     Button8.place(x=1000,y=1000)
 
 
